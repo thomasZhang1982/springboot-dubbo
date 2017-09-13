@@ -21,10 +21,5 @@ public class ExampleServiceImpl implements ExampleService {
 	}
 
 
-	@Override
-	public String testError(String error) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }
