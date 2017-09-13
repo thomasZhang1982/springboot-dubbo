@@ -48,12 +48,7 @@ public class ConsumeControllerTest {
 		RequestBuilder request = get("/hello")
 				.param("name", name);
 		
-		String responseString = mvc.perform(request).andExpect(status().isOk())
-				.andReturn().getResponse().getContentAsString();
-		
-		String expect = "Hello,"+name;
-		TestCase.assertEquals(expect, responseString);
-		
+		mvc.perform(request).andExpect(status().isOk());
 	}
 
 }

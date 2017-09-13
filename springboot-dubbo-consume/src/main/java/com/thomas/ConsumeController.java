@@ -16,7 +16,12 @@ public class ConsumeController {
 	
     @RequestMapping("/hello")
     public String index(@RequestParam(defaultValue="default") String name) {
-        return exempleServiceForConsume.hello(name);
+    	
+    	if(exempleServiceForConsume!=null) {
+    		return exempleServiceForConsume.hello(name);
+    	}
+    	
+        return null;
     }
 	
 }
