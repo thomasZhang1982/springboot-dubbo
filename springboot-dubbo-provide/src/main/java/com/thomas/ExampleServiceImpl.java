@@ -20,4 +20,11 @@ public class ExampleServiceImpl implements ExampleService {
 		return "Hello," + name;
 	}
 
+
+	@Override
+	public String testError(String error) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
