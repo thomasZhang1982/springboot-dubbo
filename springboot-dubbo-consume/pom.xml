@@ -10,7 +10,6 @@
 
 	<artifactId>springboot-dubbo-consume</artifactId>
 
-
 	<dependencies>
 		<dependency>
 			<groupId>com.thomas</groupId>
@@ -45,11 +44,13 @@
 			<artifactId>zkclient</artifactId>
 			<version>${com.github.sgroschupf.zkclient.version}</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
+		
 	</dependencies>
 	<build>
 		<plugins>

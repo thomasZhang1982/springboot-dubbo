@@ -6,6 +6,10 @@ import org.springframework.stereotype.Service;
 
 import com.thomas.service.ExampleService;
 
+/**
+ * @author thomas
+ *
+ */
 @Service
 public class ExampleServiceImpl implements ExampleService {
 
@@ -14,12 +18,9 @@ public class ExampleServiceImpl implements ExampleService {
 	
 	@Override
 	public String hello(String name) {
-		
-		logger.info("--------------------"+name);
-		
+		logger.info("方法调用，入参："+name);
 		return "Hello," + name;
 	}
-
 
 
 }
