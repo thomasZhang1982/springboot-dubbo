@@ -1,49 +1,39 @@
 package com.thomas.controller;
 
-
-
-import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.RequestBuilder;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import com.thomas.ConsumeController;
 import com.thomas.config.TestConfig;
 
-import junit.framework.TestCase;
-
-@RunWith(SpringJUnit4ClassRunner.class)
+@RunWith(SpringRunner.class)
+@SpringBootTest
+@WebAppConfiguration
 @ContextConfiguration(classes = { TestConfig.class })
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-@EnableWebMvc
+@AutoConfigureMockMvc
 public class ConsumeControllerTest {
 	
-	private MockMvc mvc;
-	
+	//mock api 模拟http请求
 	@Autowired
-	private ConsumeController consumeController;
-	
-	
-	@Before
-	public void setUp() throws Exception {
-		mvc = MockMvcBuilders.standaloneSetup(consumeController).build();
-	}
+	private MockMvc mvc;
 	
 	
 	@Test
 	public void testHello() throws Exception {
-		String name = "name";
+		String name = "consume";
 		
 		RequestBuilder request = get("/hello")
 				.param("name", name);
