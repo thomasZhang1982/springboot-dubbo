@@ -14,15 +14,25 @@ import com.thomas.config.TestConfig;
 import junit.framework.TestCase;
 
 
+/**
+ * @author thomas
+ *
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ContextConfiguration(classes = { TestConfig.class })
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ExampleServiceTest {
 	
+	/**
+	 * 示例服务测试注入
+	 */
 	@Autowired
 	private ExampleService exampleService;
 	
+	/**
+	 * 示例服务方法测试
+	 */
 	@Test
 	public void testHello() {
 		

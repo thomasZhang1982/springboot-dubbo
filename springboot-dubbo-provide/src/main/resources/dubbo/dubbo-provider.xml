@@ -15,9 +15,9 @@
    <!-- <dubbo:registry protocol="zookeeper" address="10.170.219.98:2181,10.173.55.173:2181" /> -->  
    <dubbo:registry protocol="${dubbo.registry.protocol}" address="${dubbo.registry.address}" />  
   
-    <!-- 暴露服务 -->  
+    <!-- 注册服务名称和端口 -->  
     <dubbo:protocol name="${dubbo.protocol.name}" port="${dubbo.protocol.port}" />  
       
-    <dubbo:service interface="com.thomas.service.ExampleService"  
-        ref="exampleServiceImpl" retries="0" timeout="6000" />  
+     <!-- 暴露服务 --> 
+    <dubbo:service interface="com.thomas.service.ExampleService"  ref="exampleServiceImpl" retries="0" timeout="6000" />  
 </beans>  

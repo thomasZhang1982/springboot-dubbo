@@ -8,9 +8,16 @@ import org.springframework.test.context.ContextConfiguration;
 import com.thomas.MainConfig;
 
 
+/**
+ * @author thomas
+ *
+ */
 @ContextConfiguration(classes = { TestConfig.class })
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class BaseTest {
+    /**
+     * 测试主函数联通
+     */
     @Test
     public void test(){
     	String[] args = {};

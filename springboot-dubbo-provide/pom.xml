@@ -12,12 +12,14 @@
 
 
 	<dependencies>
+		<!-- 依赖API -->
 		<dependency>
 			<groupId>com.thomas</groupId>
 			<artifactId>springboot-dubbo-api</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		
+		<!-- Web服务依赖 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>

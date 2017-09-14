@@ -8,10 +8,17 @@ import org.springframework.test.context.ContextConfiguration;
 
 import com.thomas.MainConfig;
 
+/**
+ * @author thomas
+ *
+ */
 @SpringBootTest
 @ContextConfiguration(classes = { TestConfig.class })
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class BaseTest {
+    /**
+     * 
+     */
     @Test
     public void test(){
     	String[] args = {};

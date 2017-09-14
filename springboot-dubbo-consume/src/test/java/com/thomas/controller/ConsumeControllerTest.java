@@ -18,6 +18,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.thomas.config.TestConfig;
 
+/**
+ * @author thomas
+ * 消费者Web示例调用
+ *
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @WebAppConfiguration
@@ -26,11 +31,18 @@ import com.thomas.config.TestConfig;
 @AutoConfigureMockMvc
 public class ConsumeControllerTest {
 	
-	//mock api 模拟http请求
+	
+	/**
+	 * 
+	 */
 	@Autowired
+	//mock api 模拟http请求
 	private MockMvc mvc;
 	
 	
+	/**
+	 * @throws Exception
+	 */
 	@Test
 	public void testHello() throws Exception {
 		String name = "consume";
